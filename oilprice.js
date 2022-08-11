@@ -1,17 +1,22 @@
 function oilPrice(dieselQuantity, petrolQuantity, octaneQuantity){
-    const perLitreDiesel = 114;
-    const perLitrePetrol = 130;
-    const perLitreOctane = 135;
+    if (typeof dieselQuantity && typeof petrolQuantity && typeof octaneQuantity === 'number'){
+        const perLitreDiesel = 114;
+        const perLitrePetrol = 130;
+        const perLitreOctane = 135;
 
-    dieselPrice = dieselQuantity * perLitreDiesel;
-    petrolPrice = petrolQuantity * perLitrePetrol;
-    octanePrice = octaneQuantity * perLitreOctane;
+        let dieselPrice = dieselQuantity * perLitreDiesel;
+        let petrolPrice = petrolQuantity * perLitrePetrol;
+        let octanePrice = octaneQuantity * perLitreOctane;
 
-    subTotal = dieselPrice + petrolPrice + octanePrice;
-
-    return subTotal;
+        let subTotal = dieselPrice + petrolPrice + octanePrice;
+        console.log(subTotal);
+        return subTotal;
+    }
+    else{
+        console.log('Invalid Data Type');
+    }
 
 }
 
 oilPrice(0,2,3);
-console.log(subTotal)
+// console.log(subTotal)

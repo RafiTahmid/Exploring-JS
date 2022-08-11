@@ -2,16 +2,28 @@
 // --------> Problem 1 <-------
 
 function radianToDegree(radian){
-    degree = radian * 57.29;
-    return Math.round(degree);
+    if (typeof radian === 'number'){
+        const degree = radian * 57.2951;
+        console.log(parseFloat(degree.toFixed(2)));
+        return degree;
+    }
+    else{
+        console.log('Program Requires a Number')
+    }
 }
 
 
 
 // --------> Problem 2 <-------
 
-function isJavaScriptFile(myFile){
-    console.log(myFile.endsWith('.js'));
+function isJavaScriptFile(str){
+
+    if(typeof str === 'string'){
+        console.log(str.endsWith('.js'));
+    }
+    else{
+        console.log('Input Requires String')
+    }
 }
 
 
@@ -19,17 +31,22 @@ function isJavaScriptFile(myFile){
 // --------> Problem 3 <-------
 
 function oilPrice(dieselQuantity, petrolQuantity, octaneQuantity){
-    const perLitreDiesel = 114;
-    const perLitrePetrol = 130;
-    const perLitreOctane = 135;
+    if (typeof dieselQuantity && typeof petrolQuantity && typeof octaneQuantity === 'number'){
+        const perLitreDiesel = 114;
+        const perLitrePetrol = 130;
+        const perLitreOctane = 135;
 
-    dieselPrice = dieselQuantity * perLitreDiesel;
-    petrolPrice = petrolQuantity * perLitrePetrol;
-    octanePrice = octaneQuantity * perLitreOctane;
+        let dieselPrice = dieselQuantity * perLitreDiesel;
+        let petrolPrice = petrolQuantity * perLitrePetrol;
+        let octanePrice = octaneQuantity * perLitreOctane;
 
-    subTotal = dieselPrice + petrolPrice + octanePrice;
-
-    return subTotal;
+        let subTotal = dieselPrice + petrolPrice + octanePrice;
+        console.log(subTotal);
+        return subTotal;
+    }
+    else{
+        console.log('Invalid Data Type');
+    }
 
 }
 
@@ -46,7 +63,6 @@ function publicBusFare(passengers){
             fare = remainderOf11 * 250;
             console.log(fare);
             return fare;
-            
         }
     }
     else{

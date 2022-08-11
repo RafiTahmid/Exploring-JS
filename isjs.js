@@ -1,5 +1,10 @@
 function isJavaScriptFile(str){
 
-    console.log(str.endsWith('.js'));
+    if(typeof str === 'string'){
+        console.log(str.endsWith('.js'));
+    }
+    else{
+        console.log('Input Requires String')
+    }
 }
-isJavaScriptFile('index.pdf');
+isJavaScriptFile(2);
