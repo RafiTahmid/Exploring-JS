@@ -5,13 +5,13 @@ function oilPrice(dieselQuantity, petrolQuantity, octaneQuantity){
 
     dieselPrice = dieselQuantity * perLitreDiesel;
     petrolPrice = petrolQuantity * perLitrePetrol;
-    octaneprice = octaneQuantity * perLitreOctane;
+    octanePrice = octaneQuantity * perLitreOctane;
 
-    subTotal = dieselPrice + petrolPrice + octaneprice;
+    subTotal = dieselPrice + petrolPrice + octanePrice;
 
     return subTotal;
 
 }
 
-oilPrice(1,2,1);
+oilPrice(0,2,3);
 console.log(subTotal)
