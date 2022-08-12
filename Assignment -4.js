@@ -8,7 +8,7 @@ function radianToDegree(radian){
         return degree;
     }
     else{
-        console.log('Program Requires a Number')
+        console.log('Program Requires a Number');
     }
 }
 
@@ -22,7 +22,7 @@ function isJavaScriptFile(str){
         console.log(str.endsWith('.js'));
     }
     else{
-        console.log('Input Requires String')
+        console.log('Input Requires a String');
     }
 }
 
@@ -55,7 +55,9 @@ function oilPrice(dieselQuantity, petrolQuantity, octaneQuantity){
 
 function publicBusFare(passengers){
     
-    const remainderOf50 = passengers % 50;
+    // To find out the passengers number of public Bus
+    
+    const remainderOf50 = passengers % 50;       
     const remainderOf11 = remainderOf50 % 11;
     
     if (typeof passengers === 'number'){
