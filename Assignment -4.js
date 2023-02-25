@@ -46,6 +46,7 @@ function oilPrice(dieselQuantity, petrolQuantity, octaneQuantity){
     }
     else{
         console.log('Invalid Data Type');
+
     }
 
 }
